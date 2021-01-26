@@ -19,6 +19,7 @@
 .MuiAvatar-img {
   width: 28px !important;
   height: 28px !important;
+  border-radius: 999px;
 }
 .MuiAvatar-root .MuiAvatar-circle .MuiAvatar-colorDefault {
   width: 28px !important;
