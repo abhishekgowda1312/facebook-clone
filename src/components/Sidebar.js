@@ -17,6 +17,7 @@ function Sidebar() {
             <SidebarRow src="https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/GA7Y4WRJMp8.png" title="Memories" />
             <SidebarRow src="https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/2uPlV4oORjU.png" title="Saved" />
             <SidebarRow Icon={ExpandMoreOutlined} title="See More" />
+            <div className="sidebar__empty"></div>
         </div>
     )
 }

@@ -1,6 +1,10 @@
 .sidebar {
-  border-bottom: 2px solid darkgray;
   max-width: 360px;
   padding: 25px 10px;
   flex: 0.33;
+}
+.sidebar__empty {
+  margin-left: 16px;
+  margin-right: 16px;
+  border-bottom: 1px solid gray;
 }
