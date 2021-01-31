@@ -5,9 +5,10 @@ import Feed from './components/Feed';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Widget from './components/Widget';
+import { useStateValue } from './StateProvider';
 
 function App() {
-  const user = null
+  const [{ user }, dispatch] = useStateValue()
   return (
     //?BEM naming convention
 
