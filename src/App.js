@@ -1,29 +1,39 @@
 import React from 'react'
 import './App.css';
+import Login from './components/Login'
 import Feed from './components/Feed';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Widget from './components/Widget';
 
 function App() {
+  const user = null
   return (
     //?BEM naming convention
+
     <div className="app">
+      {!user ? (<Login />) : (
 
-      {/*//? Header */}
-      <Header />
-      {/*//* app body  */}
-      <div className="app__body">
-        {/*//* sidebar */}
-        <Sidebar />
-        {/*//* Feed */}
-        <Feed />
-        <Widget />
-      </div>
+        <>
+          < Header />
+          {/*//* app body  */}
+          <div className="app__body">
+            {/*//* sidebar */}
+            <Sidebar />
+            {/*//* Feed */}
+            <Feed />
+            {/*//* widgets */}
+            <Widget />
+
+          </div>
+        </>
+
+      )
+      }
 
 
-      {/*//Todo widgets */}
-    </div>
+
+    </div >
   );
 }
 
