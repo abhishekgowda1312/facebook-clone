@@ -4,6 +4,8 @@ import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary'
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon'
 import React, { useState } from 'react'
 import './MessageSender.css'
+import db from '../firebase'
+import firebase from 'firebase'
 import { useStateValue } from '../StateProvider'
 
 
@@ -12,10 +14,16 @@ function MessageSender() {
     const [input, setInput] = useState('')
     const [imageUrl, setImageUrl] = useState('')
 
-    const handleSubmit = e => {
+    const handleSubmit = (e) => {
         e.preventDefault()
 
-
+        db.collection('posts').add({
+            message: input,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            profilePic: user.photoURL,
+            username: user.displayName,
+            image: imageUrl
+        })
         //!reset the values 
         setInput("")
         setImageUrl("")
