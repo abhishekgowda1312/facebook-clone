@@ -5,7 +5,7 @@ import './Sidebar.css'
 import SidebarRow from './SidebarRow'
 
 function Sidebar() {
-    const [{ user }, dispatch] = useStateValue()
+    const [{ user },] = useStateValue()
     return (
         <div className="sidebar">
 
